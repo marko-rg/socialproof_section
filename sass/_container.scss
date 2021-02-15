@@ -1,0 +1,17 @@
+.container {
+  max-width: 95%;
+  margin: 10rem auto;
+  padding: 8rem;
+  background-color: rgba($color-light-gray, 0.7);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  @media only screen and (max-width: $bp-phone) {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    box-shadow: none;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  }
+}

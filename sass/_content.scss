@@ -1,0 +1,103 @@
+.content {
+  max-width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: $bp-tablet) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about {
+    max-width: 40%;
+    @media only screen and (max-width: $bp-tablet) {
+      max-width: 70%;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    &__heading {
+      font-size: 5rem;
+      color: $color-primary;
+      line-height: 1.1;
+      @media only screen and (max-width: $bp-tablet) {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+      }
+    }
+
+    &__paragraph {
+      padding-top: 1rem;
+      filter: brightness(40%);
+      @media only screen and (max-width: $bp-tablet) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media only screen and (max-width: $bp-tablet) {
+      margin: 2rem;
+    }
+
+    & > * {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 5rem 1.5rem 1.5rem;
+      background-color: rgba($color-light-pink, 0.05);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+      @media only screen and (max-width: $bp-tablet) {
+        margin: 2rem;
+        padding: 2rem 5rem;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media only screen and (max-width: $bp-phone) {
+        margin: 1rem;
+        padding: 0;
+      }
+    }
+
+    & > *:hover {
+      background-color: rgba($color-pink, 1);
+    }
+
+    & > *:hover span {
+      color: $color-white;
+    }
+
+    &__first {
+      transform: translateX(-10rem);
+      @media only screen and (max-width: $bp-tablet) {
+        transform: translateX(0);
+      }
+    }
+
+    &__second {
+      transform: translateX(-5rem);
+      @media only screen and (max-width: $bp-tablet) {
+        transform: translateX(0);
+      }
+    }
+
+    &__stars {
+      margin-right: 1rem;
+    }
+
+    &__desc {
+      color: $color-primary;
+      font-weight: bold;
+      margin-left: 3rem;
+      @media only screen and (max-width: $bp-tablet) {
+        margin: 0;
+        padding-top: 1rem;
+      }
+    }
+  }
+}
